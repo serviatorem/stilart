@@ -47,9 +47,9 @@ const serviceInformation = [
         Что включает в себя ремонт?
       </h2>
       <div
-          v-for="serviceItem in serviceInformation"
-          :key="serviceItem.id"
-          class="serviceInformation__item"
+        v-for="serviceItem in serviceInformation"
+        :key="serviceItem.id"
+        class="serviceInformation__item"
       >
         <h3 class="serviceInformation__item__title h3">
           {{ serviceItem.title }}
@@ -57,6 +57,9 @@ const serviceInformation = [
         <p class="serviceInformation__item__description">
           {{ serviceItem.description }}
         </p>
+      </div>
+      <div class="serviceInformation__form">
+        <FormProject />
       </div>
     </div>
   </div>
@@ -70,6 +73,14 @@ const serviceInformation = [
     gap:30px;
     &__wrapper{
       background: $d-tree;
+    }
+    &__form{
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) 0 0 / cover, url("public/images/bg/opening2.jpg") center center no-repeat;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
     }
     &__item{
       display: flex;

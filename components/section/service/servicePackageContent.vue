@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { IService } from '~/interfaces/IService'
+import FormProject from '~/components/form/FormProject.vue'
 
 const props = defineProps<{
   service:IService
@@ -12,7 +13,7 @@ const service = props.service
   <div class="servicePackage-wrapper">
     <div class="servicePackage container">
       <h2 class="servicePackage__title h2">
-        Заголовок
+        Дизайн-проект
       </h2>
       <div class="servicePackage__content">
         <div
@@ -32,6 +33,9 @@ const service = props.service
             </p>
           </div>
         </div>
+        <div class="servicePackage__form">
+          <FormProject />
+        </div>
       </div>
     </div>
   </div>
@@ -43,6 +47,14 @@ const service = props.service
     display: flex;
     flex-direction: column;
     gap:20px;
+    &__form{
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) 0 0 / cover, url("public/images/bg/opening2.jpg") center center no-repeat;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+    }
     &-wrapper{
       background: $d-tree;
     }
