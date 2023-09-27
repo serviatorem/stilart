@@ -174,4 +174,9 @@ const cardUnits = ref([
     }
   }
 }
+@media screen and (max-width: 425px){
+  .stages-grid__line{
+    height: 59%;
+  }
+}
 </style>

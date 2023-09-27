@@ -33,9 +33,9 @@ const service = props.service
             </p>
           </div>
         </div>
-        <div class="servicePackage__form">
-          <FormProject />
-        </div>
+      </div>
+      <div class="servicePackage__form">
+        <FormProject />
       </div>
     </div>
   </div>
@@ -94,7 +94,9 @@ const service = props.service
   }
   @media screen and (max-width: 800px){
     .servicePackage{
-      grid-template-columns: 1fr;
+      &__content{
+        grid-template-columns: 1fr;
+      }
       &__item{
         border-radius: 0;
         &:nth-child(1),&:nth-child(2),&:nth-child(3),&:nth-child(4),&:nth-child(5){

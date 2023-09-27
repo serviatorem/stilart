@@ -34,7 +34,7 @@ import BaseBenefits from '~/components/base/BaseBenefits.vue'
     position: relative;
     padding: 200px 0;
     display: grid;
-    grid-template-columns: auto adpval(380, 460, 1210, 800);
+    grid-template-columns: 65% 35%;
     gap: adpval(14, 40);
   }
 

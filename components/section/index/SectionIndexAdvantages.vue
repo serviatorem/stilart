@@ -141,6 +141,7 @@ const advantages: IAdvantages[] = [
 //}
 @media screen and (max-width: 350px){
   .advantages{
+    text-align: center;
     &__content{
       display: none;
       &__mob{
@@ -153,7 +154,7 @@ const advantages: IAdvantages[] = [
   .content__item{
     grid-template-columns: 1fr;
     &-description{
-      grid-column-start: 1  ;
+      grid-column-start: 1;
     }
   }
 }

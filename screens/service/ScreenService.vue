@@ -2,6 +2,7 @@
 import { IService } from '~/interfaces/IService'
 import ServiceInformation from '~/components/section/service/serviceInformation.vue'
 import ServicePackageContent from '~/components/section/service/servicePackageContent.vue'
+import ServiceAll from '~/components/section/service/serviceAll.vue'
 
 const props = defineProps<{
   service:IService
@@ -14,6 +15,7 @@ const service = props.service
   <div class="screenService">
     <ServiceInformation v-if="service.id === 2" />
     <ServicePackageContent v-if="service.id === 3" :service="service" />
+    <ServiceAll v-if="service.id === 1" :service="service" />
   </div>
 </template>
 

@@ -56,6 +56,7 @@ const benefits: IBenefits[] = [
   @media screen and (max-width: 600px) {
     .benefits__content{
       gap:10px 50px;
+      display: grid;
       flex-wrap: wrap;
       justify-content: center;
     }

@@ -2,12 +2,16 @@
 
 import { IProject } from '~/interfaces/IProject'
 import FormProject from '~/components/form/FormProject.vue'
+import ModalWrapper from '~/components/modal/ModalWrapper.vue'
+import OpacityTransition from '~/components/transition/OpacityTransition.vue'
 
 const props = defineProps<{
   project:IProject
 }>()
 // eslint-disable-next-line vue/no-setup-props-destructure
 const project = props.project
+const modalVision = ref<boolean>(false)
+const imageModal = ref()
 </script>
 
 <template>
@@ -56,6 +60,7 @@ const project = props.project
             :src="'/images/projectPage/' + image"
             :alt="image"
             class="projectPage__images__image"
+            @click="imageModal = image;modalVision = true"
           >
         </div>
       </div>
@@ -66,6 +71,18 @@ const project = props.project
         <FormProject />
       </div>
     </div>
+    <Teleport to="body">
+      <OpacityTransition>
+        <ModalWrapper v-if="modalVision" @hide-modal="modalVision = false">
+          <img
+            :src="'/images/projectPage/' + imageModal"
+            :alt="imageModal"
+            class="projectPage__image__modal"
+            @click="modalVision = false"
+          >
+        </ModalWrapper>
+      </OpacityTransition>
+    </Teleport>
   </div>
 </template>
 
@@ -75,6 +92,12 @@ const project = props.project
     flex-direction: column;
     gap:40px;
     padding: adpval(20,50) 0;
+    &__image__modal{
+      width: 80vw;
+      max-height: 80vh;
+      height: auto;
+      cursor: pointer;
+    }
     &-wrapper{
       background: $d-tree;
       margin: -30px 0;
@@ -112,6 +135,7 @@ const project = props.project
         width:100%;
         max-height: 215px;
         object-fit: cover;
+        cursor: pointer;
       }
     }
     &__form{

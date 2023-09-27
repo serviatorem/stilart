@@ -96,6 +96,7 @@ import { projects } from '~/state'
       &_6 {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
+        max-height: none;
       }
     }
   }
