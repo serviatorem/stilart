@@ -39,7 +39,7 @@ import BaseLine from '~/components/base/BaseLine.vue'
             </div>
           </div>
           <img
-            src="/images/aboutSmall/aboutSmallOne.jpg"
+            src="/images/aboutSmall/aboutSmallTwo.jpg"
             alt="aboutSmallTwo"
             class="about-item__image"
           >
