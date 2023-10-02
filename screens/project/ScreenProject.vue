@@ -93,7 +93,7 @@ const imageModal = ref()
     gap:40px;
     padding: adpval(20,50) 0;
     &__image__modal{
-      width: 80vw;
+      max-width: 80vw;
       max-height: 80vh;
       height: auto;
       cursor: pointer;
