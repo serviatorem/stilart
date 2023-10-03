@@ -22,7 +22,7 @@ const images = ref([
   },
   {
     id: 3,
-    url: '/images/bg/opening3.png'
+    url: '/images/bg/opening3.jpg'
   }
 ])
 const currentImage = ref<string>(images.value.at(-1)!.url as string)

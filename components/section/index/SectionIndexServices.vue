@@ -35,11 +35,11 @@ import { services } from '~/state'
               Подробнее
             </p>
           </div>
-          <ul class="service-card__description">
-            <li v-for="serviceDescription in service.description" :key="serviceDescription.id" class="description__list">
-              {{ serviceDescription.briefly }}
-            </li>
-          </ul>
+          <div class="service-card__description">
+            <p class="description__list">
+              {{ service.descriptionFirstPage }}
+            </p>
+          </div>
         </NuxtLink>
       </div>
       <div class="services__cards services__cards_mob">

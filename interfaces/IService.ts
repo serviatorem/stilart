@@ -6,5 +6,6 @@ export interface IService {
   id: number;
   img: string;
   title: string;
+  descriptionFirstPage:string;
   description:any;
 }

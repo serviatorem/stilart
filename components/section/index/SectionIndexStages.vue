@@ -20,7 +20,7 @@ const cardUnits = ref([
     isActive: false
   }
 ])
-
+const more = ref(false)
 </script>
 
 <template>
@@ -47,7 +47,23 @@ const cardUnits = ref([
                 {{ cardUnit.title }}
               </h3>
               <p class="sg-card__description">
-                {{ cardUnit.description }}
+                <span v-if="more === false && cardUnit.id === 3">{{ cardUnit.description.substring(0,338) }}</span>
+                <span v-if="cardUnit.id !== 3">{{ cardUnit.description }}</span>
+                <button
+                  v-if="cardUnit.description.length > 430 && !more"
+                  class="sg-card__button-more"
+                  @click="more = true"
+                >
+                  Читать больше
+                </button>
+                <span v-if="more && cardUnit.id === 3">{{ cardUnit.description }}</span>
+                <button
+                  v-if="cardUnit.description.length > 430 && more"
+                  class="sg-card__button-more"
+                  @click="more = false"
+                >
+                  Скрыть
+                </button>
               </p>
             </div>
           </div>
@@ -86,6 +102,9 @@ const cardUnits = ref([
       .sg-card, .stages-grid__number{
         color: white;
         background-color: $tree;
+      }
+      .sg-card__button-more{
+        color:white;
       }
     }
   }
@@ -139,11 +158,18 @@ const cardUnits = ref([
     line-height: 145%;
   }
 
-  &__description {
+  &__description, &__button-more {
     margin-top: 20px;
     font-size: adpval(16, 32, 1700, 900);
     font-weight: 500;
     line-height: 145%;
+  }
+  &__button-more{
+    outline: none;
+    transition: color .5s, background-color .5s;
+    display: block;
+    background: none;
+    cursor: pointer;
   }
 }
 
@@ -164,7 +190,7 @@ const cardUnits = ref([
 
     &__line {
       position: absolute;
-      height: 66%;
+      height: 100%;
       width: 2px;
       display: block;
       background-color: $black;
@@ -172,11 +198,6 @@ const cardUnits = ref([
       right: 24px;
       z-index: -1;
     }
-  }
-}
-@media screen and (max-width: 425px){
-  .stages-grid__line{
-    height: 59%;
   }
 }
 </style>

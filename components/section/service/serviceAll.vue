@@ -9,7 +9,7 @@ const serviceOther = services
   <div class="serviceAll">
     <div class="serviceAll__content container">
       <h2 class="serviceAll__title h2">
-        Заголовок
+        Что включает в себя концепция "Заходи и живи"?
       </h2>
       <div class="serviceAll__item">
         <div class="serviceAll__item__title">
@@ -88,6 +88,7 @@ const serviceOther = services
       align-items: center;
       width: 100%;
       justify-content: center;
+      padding: adpval(30,50) 0;
     }
     &__content{
       display: flex;

@@ -54,6 +54,7 @@ const service = props.service
       align-items: center;
       width: 100%;
       justify-content: center;
+      padding: adpval(30,50) 0;
     }
     &-wrapper{
       background: $d-tree;

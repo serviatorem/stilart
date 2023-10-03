@@ -21,7 +21,7 @@ import SectionQuestion from '~/components/section/index/SectionIndexQuestion.vue
     <SectionProjects />
     <SectionStages />
     <BaseWrapper :bgcolor="'#e4d2ba'" :padding="'80px'">
-      <SectionAbout />
+      <!--      <SectionAbout />-->
       <SectionAdvantages />
       <SectionPhone />
     </BaseWrapper>
