@@ -131,26 +131,21 @@ export const services: IService[] = [
     description: [
       {
         id: 1,
-        briefly: 'Общестроительные работы',
-        full: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat'
+        briefly: 'Инженерные работы',
+        full: 'Инженерные работы при ремонте квартиры включают в себя проектирование и монтаж инженерных систем, таких как системы водоснабжения и канализации, электроснабжения, отопления, кондиционирования воздуха и других коммуникаций.'
       },
       {
         id: 2,
-        briefly: 'Инженерные работы',
-        full: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat'
+        briefly: 'Отделочные работы',
+        full: 'Отделочные работы при ремонте квартиры могут включать в себя следующие виды работ: покраска и шпаклевка стен и потолков; укладка напольных покрытий, таких как ламинат, паркет, ковровое покрытие и керамическая плитка; установка межкомнатных дверей и окон; монтаж плинтусов и наличников; установка светильников и электрических розеток; установка сантехники, такой как унитазы, раковины, душевые кабины и ванны; установка климатического оборудования, такого как кондиционеры и вентиляционные системы. Важно учитывать, что последовательность отделочных работ может варьироваться в зависимости от конкретного проекта ремонта и требований заказчика.'
       },
       {
         id: 3,
-        briefly: 'Отделочные работы',
-        full: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat'
-      },
-      {
-        id: 4,
         briefly: 'Закупка всех материалов',
         full: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat'
       },
       {
-        id: 5,
+        id: 4,
         briefly: 'Технический надзор',
         full: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat'
       }
@@ -164,28 +159,18 @@ export const services: IService[] = [
     description: [
       {
         id: 1,
-        briefly: 'Обмерный план',
-        full: ['Высота и ширина каждой стены', 'Параметры оконных и дверных проёмов', 'Расположение вентиляционных шахт', 'Расположение систем электроснабжения', 'водоснабжения и водоотведения', 'Расположение системы отопления', 'Расположение других имеющихся инженерных коммуникаций']
+        briefly: 'Перепланировка',
+        full: ['Обмер и фото помещения', 'Планировка с расстановкой мебели, поиск идеи', 'Строительный чертёж', 'Демонтажный план', 'Таблица обмеров поверхностей']
       },
       {
         id: 2,
-        briefly: 'Планировочное решение',
-        full: ['План расстановки мебели', 'План монтажа и демонтажа стен', 'План зонирования помещения', 'План покрытия пола', 'План теплого пола и радиаторов', 'План уровней потолка']
+        briefly: '3D картинки',
+        full: ['Дизайн-концепция', 'Визуализация помещений', 'Ведомость отделки помещений']
       },
       {
         id: 3,
-        briefly: 'План сантехнического и осветительного оборудования',
-        full: ['Схема размещения сантехнического оборудования', 'Схема подключения сантехнического оборудования', 'План расстановки светильников', 'План расстановки электроустановочного оборудования', 'Спецификация электрооборудования']
-      },
-      {
-        id: 4,
-        briefly: 'Развертки стен',
-        full: ['Проемы окон, дверей', 'Проекции мебели', 'Все существенные декоративные детали', 'Электрическая часть', 'Выноски с размерами и высотами']
-      },
-      {
-        id: 5,
-        briefly: 'Визуализация',
-        full: ['Моделирование 2-3 ракурсов на каждую комнату', 'Фактурные составляющие стен, полов, потолков и мебели', 'Цветовая гамма каждого помещения', 'Планировка квартиры и месторасположение мебели']
+        briefly: 'Сопутствующие чертежи',
+        full: ['Схема размещения светильников', 'Схема размещения выключателей', 'Схема размещения электрооборудования', 'Схема привязки сан. оборудования', 'Развёртка внутренней поверхности стен с/у', 'Схема раскладки плитки', 'Схема теплого пола', 'План отделки пола', 'План потолка', 'Схема размещения карнизов', 'Схема открывания дверей', 'Фрагменты декоративного оформления', 'Чертежи нестандартных деталей', 'Спецификация отделочных материалов и оборудования', 'Планировка с расстановкой мебели']
       }
     ]
   }

@@ -78,6 +78,7 @@ const serviceOther = services
 
 <style scoped lang="scss">
   .serviceAll{
+    background: $d-tree;
     &__title{
       align-self: flex-start;
     }

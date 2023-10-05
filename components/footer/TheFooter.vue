@@ -10,7 +10,7 @@ import SectionContacts from '~/components/section/the-footer/SectionContacts.vue
 
 <style scoped lang="scss">
 .footer {
-
+  background: #2c2c2c;
   &__content {
     padding: 20px 10px;
     display: flex;

@@ -187,7 +187,7 @@ import { services } from '~/state'
   }
   &__description {
     text-align: center;
-    padding:10px 0 70px 0;
+    padding:10px 10px 70px 10px;
     font-size: adpval(16, 21);
     font-style: normal;
     font-weight: 500;

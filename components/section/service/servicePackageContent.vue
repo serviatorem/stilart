@@ -25,10 +25,12 @@ const service = props.service
             {{ serviceDescription.briefly }}
           </h3>
           <div
-            v-for="fullDescription in serviceDescription.full"
             class="servicePackage__item__description-wrapper"
           >
-            <p class="servicePackage__item__description">
+            <p
+              v-for="fullDescription in serviceDescription.full"
+              class="servicePackage__item__description"
+            >
               {{ fullDescription }}
             </p>
           </div>
@@ -47,6 +49,9 @@ const service = props.service
     display: flex;
     flex-direction: column;
     gap:20px;
+    &__title{
+      text-align: center;
+    }
     &__form{
       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) 0 0 / cover, url("public/images/bg/opening2.jpg") center center no-repeat;
       background-size: cover;
@@ -61,7 +66,7 @@ const service = props.service
     }
     &__content{
       display: grid;
-      grid-template-columns: repeat(4,1fr);
+      grid-template-columns: repeat(2,1fr);
       gap:30px;
     }
     &__item{
@@ -72,21 +77,23 @@ const service = props.service
       gap:10px;
       border-radius: 4px;
       padding: 20px;
-      &:nth-child(1){
+      &:nth-child(1),&:nth-child(2){
         grid-row-start: 1;
         grid-row-end: 3;
+        .servicePackage__item__description-wrapper{
+          display: grid;
+          grid-template-columns: 1fr;
+          gap:20px;
+        }
       }
-      &:nth-child(2),&:nth-child(3){
-        grid-column-start: 2;
-        grid-column-end: 5;
-      }
-      &:nth-child(4){
+      &:nth-child(3){
         grid-column-start: 1;
         grid-column-end: 3;
-      }
-      &:nth-child(5){
-        grid-column-start: 3;
-        grid-column-end: 5;
+        .servicePackage__item__description-wrapper{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap:20px;
+        }
       }
       &__title{
         font-size: adpval(22,26);
@@ -100,7 +107,7 @@ const service = props.service
       }
       &__item{
         border-radius: 0;
-        &:nth-child(1),&:nth-child(2),&:nth-child(3),&:nth-child(4),&:nth-child(5){
+        &:nth-child(1),&:nth-child(2),&:nth-child(3){
           grid-column: auto;
           grid-row: auto;
         }
