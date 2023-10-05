@@ -44,6 +44,6 @@ defineEmits<{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap:40px;
+  gap:0;
 }
 </style>

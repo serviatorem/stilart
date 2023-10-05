@@ -72,7 +72,7 @@ withDefaults(
   }
   &_wide &__items {
     flex-direction: column;
-    gap: 50px;
+    gap: 15px;
   }
 
   &_header {
