@@ -105,6 +105,9 @@ function changeBurgerVisibility () {
       display: block;
       z-index: 6;
     }
+    &__content-question{
+      display: none;
+    }
   }
 }
 </style>
