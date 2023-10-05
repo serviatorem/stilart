@@ -45,5 +45,6 @@ defineEmits<{
   justify-content: center;
   flex-direction: column;
   gap:0;
+  background: $tree;
 }
 </style>
