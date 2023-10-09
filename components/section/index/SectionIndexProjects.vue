@@ -1,5 +1,6 @@
 <script setup lang="ts">
 
+// eslint-disable-next-line import/namespace
 import { projects } from '~/state'
 </script>
 

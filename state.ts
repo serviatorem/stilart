@@ -6,91 +6,37 @@ export const projects: IProject[] = [
     id: 1,
     name: 'Шоу рум IKEA',
     image: 'projects_1-1.jpg',
-    info: {
-      year: '2021',
-      square: '125 м2',
-      designers: 'Тихон и я',
-      decorator: 'Тихон',
-      photograph: 'Тихон',
-      countRoom: '4',
-      term: '10 месяцев',
-      images: ['projects_1-1.jpg', 'projects_1-2.jpg', 'projects_1-3.jpg', 'projects_1-4.jpg', 'projects_1-5.jpg', 'projects_1-6.jpg', 'projects_1-7.jpg', 'projects_1-8.jpg', 'projects_1-9.jpg', 'projects_1-10.jpg']
-    }
+    images: ['projects_1-1.jpg', 'projects_1-2.jpg', 'projects_1-3.jpg', 'projects_1-4.jpg', 'projects_1-5.jpg', 'projects_1-6.jpg', 'projects_1-7.jpg', 'projects_1-8.jpg', 'projects_1-9.jpg', 'projects_1-10.jpg']
   },
   {
     id: 2,
     name: 'Шоу рум IKEA',
     image: 'projects_2-1.jpg',
-    info: {
-      year: '2021',
-      square: '125 м2',
-      designers: 'Тихон и я',
-      decorator: 'Тихон',
-      photograph: 'Тихон',
-      countRoom: '4',
-      term: '10 месяцев',
-      images: ['projects_2-1.jpg', 'projects_2-2.jpg', 'projects_2-3.jpg', 'projects_2-4.jpg', 'projects_2-5.jpg', 'projects_2-6.jpg', 'projects_2-7.jpg', 'projects_2-8.jpg', 'projects_2-9.jpg', 'projects_2-10.jpg', 'projects_2-11.jpg', 'projects_2-12.jpg']
-    }
+    images: ['projects_2-1.jpg', 'projects_2-2.jpg', 'projects_2-3.jpg', 'projects_2-4.jpg', 'projects_2-5.jpg', 'projects_2-6.jpg', 'projects_2-7.jpg', 'projects_2-8.jpg', 'projects_2-9.jpg', 'projects_2-10.jpg', 'projects_2-11.jpg', 'projects_2-12.jpg']
   },
   {
     id: 3,
     name: 'Шоу рум IKEA',
     image: 'projects_3-1.jpg',
-    info: {
-      year: '2021',
-      square: '125 м2',
-      designers: 'Тихон и я',
-      decorator: 'Тихон',
-      photograph: 'Тихон',
-      countRoom: '4',
-      term: '10 месяцев',
-      images: ['projects_3-1.jpg', 'projects_3-2.jpg', 'projects_3-3.jpg', 'projects_3-4.jpg', 'projects_3-5.jpg', 'projects_3-6.jpg', 'projects_3-7.jpg', 'projects_3-8.jpg']
-    }
+    images: ['projects_3-1.jpg', 'projects_3-2.jpg', 'projects_3-3.jpg', 'projects_3-4.jpg', 'projects_3-5.jpg', 'projects_3-6.jpg', 'projects_3-7.jpg', 'projects_3-8.jpg']
   },
   {
     id: 4,
     name: 'Шоу рум IKEA',
     image: 'projects_4-1.jpg',
-    info: {
-      year: '2021',
-      square: '125 м2',
-      designers: 'Тихон и я',
-      decorator: 'Тихон',
-      photograph: 'Тихон',
-      countRoom: '4',
-      term: '10 месяцев',
-      images: ['projects_4-1.jpg', 'projects_4-2.jpg', 'projects_4-3.jpg', 'projects_4-4.jpg', 'projects_4-5.jpg', 'projects_4-6.jpg']
-    }
+    images: ['projects_4-1.jpg', 'projects_4-2.jpg', 'projects_4-3.jpg', 'projects_4-4.jpg', 'projects_4-5.jpg', 'projects_4-6.jpg']
   },
   {
     id: 5,
     name: 'Шоу рум IKEA',
     image: 'projects_5-1.jpg',
-    info: {
-      year: '2021',
-      square: '125 м2',
-      designers: 'Тихон и я',
-      decorator: 'Тихон',
-      photograph: 'Тихон',
-      countRoom: '4',
-      term: '10 месяцев',
-      images: ['projects_5-1.jpg', 'projects_5-2.jpg', 'projects_5-3.jpg', 'projects_5-4.jpg', 'projects_5-5.jpg', 'projects_5-6.jpg', 'projects_5-7.jpg', 'projects_5-8.jpg', 'projects_5-9.jpg', 'projects_5-10.jpg', 'projects_5-11.jpg', 'projects_5-12.jpg', 'projects_5-13.jpg', 'projects_5-14.jpg', 'projects_5-15.jpg', 'projects_5-16.jpg', 'projects_5-17.jpg', 'projects_5-18.jpg', 'projects_5-19.jpg', 'projects_5-20.jpg', 'projects_5-21.jpg', 'projects_5-22.jpg', 'projects_5-23.jpg', 'projects_5-23.jpg', 'projects_5-24.jpg', 'projects_5-25.jpg', 'projects_5-26.jpg', 'projects_5-27.jpg', 'projects_5-28.jpg', 'projects_5-30.jpg']
-    }
+    images: ['projects_5-1.jpg', 'projects_5-2.jpg', 'projects_5-3.jpg', 'projects_5-4.jpg', 'projects_5-5.jpg', 'projects_5-6.jpg', 'projects_5-7.jpg', 'projects_5-8.jpg', 'projects_5-9.jpg', 'projects_5-10.jpg', 'projects_5-11.jpg', 'projects_5-12.jpg', 'projects_5-13.jpg', 'projects_5-14.jpg', 'projects_5-15.jpg', 'projects_5-16.jpg', 'projects_5-17.jpg', 'projects_5-18.jpg', 'projects_5-19.jpg', 'projects_5-20.jpg', 'projects_5-21.jpg', 'projects_5-22.jpg', 'projects_5-23.jpg', 'projects_5-23.jpg', 'projects_5-24.jpg', 'projects_5-25.jpg', 'projects_5-26.jpg', 'projects_5-27.jpg', 'projects_5-28.jpg', 'projects_5-30.jpg']
   },
   {
     id: 6,
     name: 'Шоу рум IKEA',
     image: 'projects_1-1.jpg',
-    info: {
-      year: '2021',
-      square: '125 м2',
-      designers: 'Тихон и я',
-      decorator: 'Тихон',
-      photograph: 'Тихон',
-      countRoom: '4',
-      term: '10 месяцев',
-      images: ['projects_1-1.jpg', 'projects_1-2.jpg', 'projects_1-3.jpg', 'projects_1-4.jpg', 'projects_1-5.jpg', 'projects_1-6.jpg', 'projects_1-7.jpg', 'projects_1-8.jpg', 'projects_1-9.jpg', 'projects_1-10.jpg']
-    }
+    images: ['projects_1-1.jpg', 'projects_1-2.jpg', 'projects_1-3.jpg', 'projects_1-4.jpg', 'projects_1-5.jpg', 'projects_1-6.jpg', 'projects_1-7.jpg', 'projects_1-8.jpg', 'projects_1-9.jpg', 'projects_1-10.jpg']
   }
 ]
 

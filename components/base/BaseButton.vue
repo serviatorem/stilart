@@ -39,6 +39,11 @@ const NuxtLink = resolveComponent('NuxtLink')
     background-color: $d-tree;
     color: $tree;
     font-weight: bold;
+    transition: all 0.2s linear;
+    &:hover{
+      background: $tree;
+      color:$d-tree;
+    }
   }
 
   &_flat {
@@ -49,6 +54,9 @@ const NuxtLink = resolveComponent('NuxtLink')
     transition:
       color 0.2s,
       background-color 0.2s;
+    &:hover{
+      font-weight: bold;
+    }
   }
 
   &_primary {

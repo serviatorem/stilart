@@ -52,7 +52,7 @@ const imageModal = ref()
       </div>
       <div class="projectPage__images">
         <div
-          v-for="image in project.info.images"
+          v-for="image in project.images"
           :key="project.id"
           class="projectPage__images__image-wrapper"
         >
