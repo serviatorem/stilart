@@ -5,7 +5,7 @@ import BaseBenefits from '~/components/base/BaseBenefits.vue'
 
 <template>
   <section class="opening w">
-    <div class="container opening__content">
+    <div class="opening__content">
       <div class="opening__left">
         <div class="opening__left-titles">
           <h1 class="opening__title">
@@ -15,7 +15,7 @@ import BaseBenefits from '~/components/base/BaseBenefits.vue'
             Можно просто расслабиться и быть настоящим.
           </h2>
         </div>
-        <BaseBenefits/>
+        <BaseBenefits />
       </div>
       <div class="opening__right">
         <FormOpening />
@@ -32,10 +32,12 @@ import BaseBenefits from '~/components/base/BaseBenefits.vue'
 
   &__content {
     position: relative;
-    padding: 200px 0;
+    padding: 200px 20px;
     display: grid;
-    grid-template-columns: 65% 35%;
+    grid-template-columns: 1fr 0.5fr;
     gap: adpval(14, 40);
+    max-width: 1440px;
+    margin: 0 auto;
   }
 
   &__left {
@@ -85,10 +87,10 @@ import BaseBenefits from '~/components/base/BaseBenefits.vue'
     letter-spacing: 2.52px;
     text-transform: uppercase;
     &:first-child{
-      font-size: adpval(30, 40);
+      font-size: adpval(35, 45);
     }
     &:last-child{
-      font-size: adpval(26, 34);
+      font-size: adpval(24, 34);
     }
   }
 }

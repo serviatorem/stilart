@@ -10,13 +10,13 @@ const benefits: IBenefits[] = [
   },
   {
     id: 2,
-    name: '100%',
-    description: 'экономия времени'
+    name: 'от дизайна',
+    description: 'до реализации'
   },
   {
     id: 3,
-    name: 'от дизайна',
-    description: 'до реализации'
+    name: '100%',
+    description: 'экономия времени'
   }
 ]
 </script>
@@ -37,7 +37,7 @@ const benefits: IBenefits[] = [
     &__content{
       display: flex;
       align-items: center;
-      gap:50px;
+      gap:30px;
     }
     &-item{
       display: flex;
@@ -46,11 +46,11 @@ const benefits: IBenefits[] = [
   }
   .content__item{
     &-title{
-      font-size: adpval(30, 32);
+      font-size: adpval(27, 29);
       text-transform: lowercase;
     }
     &-description{
-      font-size: adpval(20, 24);
+      font-size: adpval(27, 29);
     }
   }
   @media screen and (max-width: 600px) {
