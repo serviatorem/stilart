@@ -56,7 +56,7 @@ export const projects: IProject[] = [
   },
   {
     id: 4,
-    name: 'ЖК',
+    name: 'ЖК Ясный',
     image: 'projects_6-1.jpg',
     images: ['projects_6-1.jpg', 'projects_6-2.jpg', 'projects_6-3.jpg', 'projects_6-4.jpg', 'projects_6-5.jpg', 'projects_6-6.jpg', 'projects_6-7.jpg', 'projects_6-8.jpg', 'projects_6-9.jpg', 'projects_6-10.jpg', 'projects_6-11.jpg', 'projects_6-12.jpg', 'projects_6-13.jpg', 'projects_6-14.jpg', 'projects_6-15.jpg', 'projects_6-16.jpg']
   },
