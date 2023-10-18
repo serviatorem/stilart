@@ -134,6 +134,7 @@ const imageModal = ref()
       &__image{
         width:100%;
         max-height: 215px;
+        height: 100%;
         object-fit: cover;
         cursor: pointer;
       }

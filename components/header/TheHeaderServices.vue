@@ -23,6 +23,22 @@ const images = ref([
   {
     id: 3,
     url: '/images/bg/opening3.jpg'
+  },
+  {
+    id: 4,
+    url: '/images/bg/opening4.jpg'
+  },
+  {
+    id: 5,
+    url: '/images/bg/opening5.jpg'
+  },
+  {
+    id: 6,
+    url: '/images/bg/opening6.jpg'
+  },
+  {
+    id: 7,
+    url: '/images/bg/opening7.jpg'
   }
 ])
 const currentImage = ref<string>(images.value.at(-1)!.url as string)
@@ -35,7 +51,11 @@ interface imagesIndexIterator extends Generator<number, number, number> {
 function * imagesIndexGenerator (): imagesIndexIterator {
   yield 0
   yield 1
-  return 2
+  yield 2
+  yield 3
+  yield 4
+  yield 5
+  return 6
 }
 
 onMounted(() => {

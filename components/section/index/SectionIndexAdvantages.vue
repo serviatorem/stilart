@@ -21,21 +21,21 @@ const advantages: IAdvantages[] = [
 </script>
 
 <template>
-  <section class="container advantages">
+  <section id="about" class="container advantages">
     <h2 class="advantages__title h2">
-      StilArt это:
+      О StilArt:
     </h2>
     <div class="advantages__content">
       <div v-for="advantage in advantages" :key="advantage.id" class="advantages__content-item content__item">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g id="akar-icons:check">
             <path
-              id="Vector"
-              d="M4 12L10 18L20 6"
-              stroke="#4e3629"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+                id="Vector"
+                d="M4 12L10 18L20 6"
+                stroke="#4e3629"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
             />
           </g>
         </svg>
@@ -46,11 +46,11 @@ const advantages: IAdvantages[] = [
     </div>
     <div class="advantages__content advantages__content__mob">
       <Swiper
-        :modules="[SwiperAutoplay]"
-        :slides-per-view="1"
-        :loop="true"
-        :space-between="'20px'"
-        :autoplay="{
+          :modules="[SwiperAutoplay]"
+          :slides-per-view="1"
+          :loop="true"
+          :space-between="'20px'"
+          :autoplay="{
           delay: 3000,
           disableOnInteraction: true,
         }"

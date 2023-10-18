@@ -36,8 +36,12 @@ import { services } from '~/state'
             </p>
           </div>
           <div class="service-card__description">
-            <p class="description__list">
-              {{ service.descriptionFirstPage }}
+            <p
+              v-for="item in service.descriptionFirstPage"
+              class="description__list"
+              :class="{first: service.id === 1,second: service.id === 2,third: service.id === 3}"
+            >
+              {{ item }}
             </p>
           </div>
         </NuxtLink>
@@ -199,6 +203,22 @@ import { services } from '~/state'
     background: $tree;
     width: 100%;
     height: 100%;
+    .description__list{
+      text-decoration-line: line-through;
+      }
+    .description__list.first{
+      &:nth-child(1){
+        text-decoration-line: none;
+      }
+    }
+    .description__list.second{
+      &:nth-child(2){
+        text-decoration-line: none;
+      }
+    }
+    .description__list.third{
+      text-decoration-line: none;
+    }
   }
 
   &:hover {

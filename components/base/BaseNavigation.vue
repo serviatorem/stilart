@@ -1,20 +1,15 @@
 <script setup lang="ts">
 withDefaults(
-  defineProps<{
-    type: 'footer' | 'header' | 'wide';
-  }>(),
-  { type: 'header' }
+    defineProps<{
+      type: 'footer' | 'header' | 'wide';
+    }>(),
+    { type: 'header' }
 )
 </script>
 
 <template>
   <nav :class="[`nav_${type}`]" class="nav">
     <ul class="nav__items w">
-      <!--      <li class="nav__item">-->
-      <!--        <NuxtLink to="/#about" class="a">-->
-      <!--          О нас-->
-      <!--        </NuxtLink>-->
-      <!--      </li>-->
       <li class="nav__item">
         <NuxtLink to="/#services" class="a">
           Услуги
@@ -28,6 +23,11 @@ withDefaults(
       <li class="nav__item">
         <NuxtLink to="/#stages" class="a">
           Этапы работ
+        </NuxtLink>
+      </li>
+      <li class="nav__item">
+        <NuxtLink to="/#about" class="a">
+          О нас
         </NuxtLink>
       </li>
       <li class="nav__item">

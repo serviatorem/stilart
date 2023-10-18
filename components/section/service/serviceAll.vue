@@ -14,19 +14,19 @@ const serviceOther = services
       <div class="serviceAll__item">
         <div class="serviceAll__item__title">
           <h3 class="h3">
-            {{ serviceOther[2].title }}
+            {{ serviceOther[0].title }}
           </h3>
           <BaseButton type="flat">
-            <NuxtLink to="/service/3">
+            <NuxtLink to="/service/1">
               Подробнее
             </NuxtLink>
           </BaseButton>
         </div>
         <div class="serviceAll__item__description">
           <p
-            v-for="service in serviceOther[2].description"
-            :key="service.id"
-            class="serviceAll__item__description__item"
+              v-for="service in serviceOther[2].description"
+              :key="service.id"
+              class="serviceAll__item__description__item"
           >
             {{ service.briefly }}
           </p>
@@ -45,9 +45,9 @@ const serviceOther = services
         </div>
         <div class="serviceAll__item__description">
           <p
-            v-for="service in serviceOther[1].description"
-            :key="service.id"
-            class="serviceAll__item__description__item"
+              v-for="service in serviceOther[1].description"
+              :key="service.id"
+              class="serviceAll__item__description__item"
           >
             {{ service.briefly }}
           </p>
@@ -61,9 +61,9 @@ const serviceOther = services
         </div>
         <div class="serviceAll__item__description">
           <p
-            v-for="service in serviceOther[0].description"
-            :key="service.id"
-            class="serviceAll__item__description__item"
+              v-for="service in serviceOther[0].description"
+              :key="service.id"
+              class="serviceAll__item__description__item"
           >
             {{ service.briefly }}
           </p>
@@ -77,52 +77,52 @@ const serviceOther = services
 </template>
 
 <style scoped lang="scss">
-  .serviceAll{
-    background: $d-tree;
-    &__title{
-      align-self: flex-start;
-    }
-    &__form{
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) 0 0 / cover, url("public/images/bg/opening2.jpg") center center no-repeat;
-      background-size: cover;
+.serviceAll{
+  background: $d-tree;
+  &__title{
+    align-self: flex-start;
+  }
+  &__form{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) 0 0 / cover, url("public/images/bg/opening2.jpg") center center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    padding: adpval(30,50) 0;
+  }
+  &__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    gap:30px;
+  }
+  &__item{
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    gap:50px;
+    width: 100%;
+    &__description{
+      font-size: adpval(16,20);
       display: flex;
-      align-items: center;
-      width: 100%;
-      justify-content: center;
-      padding: adpval(30,50) 0;
-    }
-    &__content{
-      display: flex;
+      gap: 15px;
       flex-direction: column;
-      align-items: center;
-      padding: 50px 0;
-      gap:30px;
+      padding-top: 15px;
     }
+  }
+}
+@media screen and (max-width: 950px){
+  .serviceAll{
     &__item{
-      display: grid;
-      grid-template-columns: 30% 1fr;
-      gap:50px;
-      width: 100%;
-      &__description{
-        font-size: adpval(16,20);
+      grid-template-columns: 1fr;
+      gap:0;
+      &__title{
         display: flex;
-        gap: 15px;
-        flex-direction: column;
-        padding-top: 15px;
+        gap:adpval(0,30px);
+        align-items: center;
       }
     }
   }
-  @media screen and (max-width: 950px){
-    .serviceAll{
-      &__item{
-        grid-template-columns: 1fr;
-        gap:0;
-        &__title{
-          display: flex;
-          gap:adpval(0,30px);
-          align-items: center;
-        }
-      }
-    }
-  }
+}
 </style>

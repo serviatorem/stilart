@@ -5,7 +5,7 @@
 <template>
   <section class="question">
     <div class="container question__content">
-      <h2 class="question__content__title h3">
+      <h2 class="question__content__title h2">
         Вы уже делали ремонт самостоятельно?
       </h2>
       <p class="question__content__description">
@@ -19,9 +19,6 @@
       </p>
     </div>
     <div class="question__footer container">
-      <h2 class="question__footer__title h3">
-        Вы уже делали ремонт самостоятельно - сделай больше
-      </h2>
       <p class="question__footer__description">
         Если вам необходимо делегировать всю боль стройки и получить радость от результата-пишите, звоните или оставьте заявку, мы с вами свяжемся.
       </p>
@@ -31,35 +28,35 @@
 </template>
 
 <style scoped lang="scss">
-  .question{
+.question{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap:50px;
+  &__content{
     display: grid;
     grid-template-columns: 1fr;
-    gap:50px;
-    &__content{
-      display: grid;
-      grid-template-columns: 1fr;
-      gap:30px;
-      &__description{
-        font-style: normal;
-        font-weight: 500;
-        line-height: 145%;
-        font-size: adpval(18,24);
-      }
-    }
-    &__footer{
-      display: grid;
-      grid-template-columns: 1fr;
-      gap:30px;
-      &__description{
-        font-style: normal;
-        font-weight: 500;
-        line-height: 145%;
-        font-size: adpval(22,28);
-      }
-      .motto{
-        text-align: center;
-        font-weight: bold;
-      }
+    gap:30px;
+    &__description{
+      font-style: normal;
+      font-weight: 500;
+      line-height: 145%;
+      font-size: adpval(18,24);
     }
   }
+  &__footer{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:30px;
+    &__description{
+      font-style: normal;
+      font-weight: 500;
+      line-height: 145%;
+      font-size: adpval(22,28);
+    }
+    .motto{
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+}
 </style>
