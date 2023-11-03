@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     'nuxt-swiper',
     '@nuxtjs/google-fonts',
     'nuxt-mail',
+    '@nuxtjs/yandex-metrika',
     'nuxt-gtag'
   ],
   runtimeConfig: {
@@ -54,5 +55,10 @@ export default defineNuxtConfig({
       title: 'StilArt',
       description: ''
     }
+  },
+  yandexMetrika: {
+    id:'95455139',
+    webvisor:true,
+    clickmap:true,
   }
 })
