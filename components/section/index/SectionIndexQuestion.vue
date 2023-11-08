@@ -54,7 +54,6 @@
       font-size: adpval(22,28);
     }
     .motto{
-      text-align: center;
       font-weight: bold;
     }
   }
