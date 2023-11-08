@@ -56,7 +56,7 @@ import BaseLine from '~/components/base/BaseLine.vue'
     </div>
     <img
         class="contacts__map"
-        src="/images/projects/projects0.jpg"
+        src="public/images/footer/footer.jpg"
         alt="map"
     >
     <BaseLine color="white" top="20%" width="100%" />

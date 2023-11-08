@@ -47,7 +47,11 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      Lunasima: true
+      Lunasima: true,
+      Cormorant: true,
+      Brela: true,
+      'Libre Baskerville': true,
+      Butler: true
     },
     subsets: 'cyrillic'
   },
