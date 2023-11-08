@@ -25,7 +25,7 @@ import BaseLine from '~/components/base/BaseLine.vue'
                 ОГРНИП 321774600705557
               </p>
               <p class="contacts__item">
-                Телефон +77777777777
+                Телефон +7(915)774-64-30
               </p>
               <p class="contacts__item">
                 г. Москва
