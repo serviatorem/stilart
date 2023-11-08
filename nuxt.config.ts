@@ -60,10 +60,5 @@ export default defineNuxtConfig({
       title: 'StilArt',
       description: ''
     }
-  },
-  yandexMetrika: {
-    id:'95455139',
-    webvisor:true,
-    clickmap:true,
   }
 })
