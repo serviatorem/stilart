@@ -6,7 +6,6 @@ export default defineNuxtConfig({
     'nuxt-swiper',
     '@nuxtjs/google-fonts',
     'nuxt-mail',
-    '@nuxtjs/yandex-metrika',
     'nuxt-gtag'
   ],
   runtimeConfig: {
