@@ -1,7 +1,10 @@
 <script setup lang="ts">
 
-// eslint-disable-next-line import/namespace
-import { projects } from '~/state'
+import { useAPI } from '~/API'
+import BaseButton from '~/components/base/BaseButton.vue'
+
+const useAPIStore = useAPI()
+const projects = await useAPIStore.getPortfolio()
 </script>
 
 <template>
@@ -12,24 +15,25 @@ import { projects } from '~/state'
       </h2>
       <div class="projects__cards w projects__cards_6">
         <NuxtLink
-          v-for="project in projects"
+          v-for="project in projects.data.slice(0,6)"
           :key="project.id"
           class="projects__card project-card w"
           :to="`/project/${project.id}`"
         >
           <img
-            :src="`/images/projectPage/${project.image}`"
+            :src="`http://213.171.5.143:1337${project.attributes.images.data[0].attributes.formats.large.url}`"
             alt="Проект компании StilArt"
             class="project-card__image w"
           >
           <div class="project-card__info">
             <h3 class="h2 project-card__title">
-              {{ project.name }}
+              {{ project.attributes.title }}
             </h3>
             <p>Подробнее</p>
           </div>
         </NuxtLink>
       </div>
+      <BaseButton type="transparent"><NuxtLink to="/projects">Больше работ</NuxtLink></BaseButton>
     </div>
   </section>
 </template>

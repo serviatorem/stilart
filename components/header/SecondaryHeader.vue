@@ -25,12 +25,12 @@ function changeBurgerVisibility () {
         <BaseNavigation style="color: black" class="header__nav" />
       </div>
       <div class="header__content-question">
-        <a href="tel:+7(999)999-99-99" class="header__content-phone">
-          +7(999)999-99-99
+        <a href="tel:+7(915)774-64-30" class="header__content-phone">
+          +7(915)774-64-30
         </a>
         <BaseButton
-          type="transparent"
-          @click="modalVision = true"
+            type="transparent"
+            @click="modalVision = true"
         >
           Задать вопрос
         </BaseButton>
@@ -43,9 +43,9 @@ function changeBurgerVisibility () {
         </Teleport>
       </div>
       <BaseBurger
-        :is-open="isBurgerOpen"
-        class="header__burger-button"
-        @click="changeBurgerVisibility"
+          :is-open="isBurgerOpen"
+          class="header__burger-button"
+          @click="changeBurgerVisibility"
       />
       <Teleport to="body">
         <TransitionOpacity>

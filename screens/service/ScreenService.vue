@@ -14,8 +14,8 @@ const service = props.service
 <template>
   <div class="screenService">
     <ServiceInformation v-if="service.id === 2" />
-    <ServicePackageContent v-if="service.id === 3" :service="service" />
-    <ServiceAll v-if="service.id === 1" :service="service" />
+    <ServicePackageContent v-if="service.id === 1" :service="service" />
+    <ServiceAll v-if="service.id === 3" :service="service" />
   </div>
 </template>
 

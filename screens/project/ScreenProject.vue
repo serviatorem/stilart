@@ -52,15 +52,15 @@ const imageModal = ref()
       </div>
       <div class="projectPage__images">
         <div
-          v-for="image in project.images"
-          :key="project.id"
-          class="projectPage__images__image-wrapper"
+            v-for="image in project.images"
+            :key="project.id"
+            class="projectPage__images__image-wrapper"
         >
           <img
-            :src="'/images/projectPage/' + image"
-            :alt="image"
-            class="projectPage__images__image"
-            @click="imageModal = image;modalVision = true"
+              :src="'/images/projectPage/' + image"
+              :alt="image"
+              class="projectPage__images__image"
+              @click="imageModal = image;modalVision = true"
           >
         </div>
       </div>
@@ -75,10 +75,10 @@ const imageModal = ref()
       <OpacityTransition>
         <ModalWrapper v-if="modalVision" @hide-modal="modalVision = false">
           <img
-            :src="'/images/projectPage/' + imageModal"
-            :alt="imageModal"
-            class="projectPage__image__modal"
-            @click="modalVision = false"
+              :src="'/images/projectPage/' + imageModal"
+              :alt="imageModal"
+              class="projectPage__image__modal"
+              @click="modalVision = false"
           >
         </ModalWrapper>
       </OpacityTransition>
@@ -87,87 +87,88 @@ const imageModal = ref()
 </template>
 
 <style scoped lang="scss">
-  .projectPage{
-    display: flex;
-    flex-direction: column;
-    gap:40px;
-    padding: adpval(20,50) 0;
-    &__image__modal{
-      max-width: 80vw;
-      max-height: 80vh;
-      height: auto;
+.projectPage{
+  display: flex;
+  flex-direction: column;
+  gap:40px;
+  padding: adpval(20,50) 0;
+  &__image__modal{
+    max-width: 80vw;
+    max-height: 80vh;
+    height: auto;
+    cursor: pointer;
+  }
+  &-wrapper{
+    background: $d-tree;
+    margin: -30px 0;
+  }
+  &__info{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap:10px;
+    &__title{
+      &-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap:30px;
+      }
+    }
+    &__description{
+      &-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+      }
+      font-weight: lighter;
+      font-size: adpval(16,20);
+      span{
+        font-weight: 400;
+      }
+    }
+  }
+  &__images{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:10px;
+    &__image{
+      width:100%;
+      max-height: 215px;
+      height: 100%;
+      object-fit: cover;
       cursor: pointer;
     }
-    &-wrapper{
-      background: $d-tree;
-      margin: -30px 0;
+  }
+  &__form{
+    width: 100%;
+    color: white;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 900px){
+  .projectPage{
+    &__images{
+      grid-template-columns: repeat(3,1fr);
+    }
+  }
+}
+@media screen and (max-width: 600px){
+  .projectPage{
+    &__images{
+      grid-template-columns: repeat(2,1fr);
     }
     &__info{
-      display: grid;
       grid-template-columns: 1fr;
-      justify-items: center;
-      gap:10px;
-      &__title{
-        &-wrapper{
-          display: flex;
-          flex-direction: column;
-          gap:30px;
-        }
-      }
       &__description{
         &-wrapper{
-          display: flex;
-          flex-direction: column;
-          gap:10px;
-        }
-        font-weight: lighter;
-        font-size: adpval(16,20);
-        span{
-          font-weight: 400;
-        }
-      }
-    }
-    &__images{
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
-      gap:10px;
-      &__image{
-        width:100%;
-        max-height: 215px;
-        object-fit: cover;
-        cursor: pointer;
-      }
-    }
-    &__form{
-      width: 100%;
-      color: white;
-      padding: 30px 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-size: cover;
-    }
-  }
-  @media screen and (max-width: 900px){
-    .projectPage{
-      &__images{
-        grid-template-columns: repeat(3,1fr);
-      }
-    }
-  }
-  @media screen and (max-width: 600px){
-    .projectPage{
-      &__images{
-        grid-template-columns: repeat(2,1fr);
-      }
-      &__info{
-        grid-template-columns: 1fr;
-        &__description{
-          &-wrapper{
-            align-items: center;
-          }
+          align-items: center;
         }
       }
     }
   }
+}
 </style>

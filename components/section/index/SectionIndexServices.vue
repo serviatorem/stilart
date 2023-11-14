@@ -11,19 +11,19 @@ import { services } from '~/state'
       </h2>
       <div class="services__cards">
         <NuxtLink
-          v-for="service in services"
-          :key="service.id"
-          :to="`service/${service.id}`"
-          :autoplay="{
+            v-for="service in services"
+            :key="service.id"
+            :to="`service/${service.id}`"
+            :autoplay="{
             delay: 3000,
             disableOnInteraction: true,
           }"
-          class="service__card service-card"
+            class="service__card service-card"
         >
           <img
-            :src="`/images/services/${service.img}`"
-            alt="service"
-            class="service-card__image"
+              :src="`/images/services/${service.img}`"
+              alt="service"
+              class="service-card__image"
           >
           <div class="service-card__front">
             <h3 class="h3 service-card__title">
@@ -36,32 +36,36 @@ import { services } from '~/state'
             </p>
           </div>
           <div class="service-card__description">
-            <p class="description__list">
-              {{ service.descriptionFirstPage }}
+            <p
+                v-for="item in service.descriptionFirstPage"
+                class="description__list"
+                :class="{first: service.id === 1,second: service.id === 2,third: service.id === 3}"
+            >
+              {{ item }}
             </p>
           </div>
         </NuxtLink>
       </div>
       <div class="services__cards services__cards_mob">
         <Swiper
-          :modules="[SwiperAutoplay]"
-          :slides-per-view="1"
-          :loop="true"
-          :space-between="'20px'"
+            :modules="[SwiperAutoplay]"
+            :slides-per-view="1"
+            :loop="true"
+            :space-between="'20px'"
         >
           <SwiperSlide
-            v-for="service in services"
-            :key="service.id"
+              v-for="service in services"
+              :key="service.id"
           >
             <NuxtLink
-              :to="`service/${service.id}`"
-              class="service__card service-card"
+                :to="`service/${service.id}`"
+                class="service__card service-card"
             >
               <div class="service__card-image__wrapper">
                 <img
-                  :src="`/images/services/${service.img}`"
-                  alt="service"
-                  class="service-card__image"
+                    :src="`/images/services/${service.img}`"
+                    alt="service"
+                    class="service-card__image"
                 >
               </div>
               <div class="service-card__front">
@@ -199,6 +203,22 @@ import { services } from '~/state'
     background: $tree;
     width: 100%;
     height: 100%;
+    .description__list{
+      text-decoration-line: line-through;
+    }
+    .description__list.first{
+      &:nth-child(1){
+        text-decoration-line: none;
+      }
+    }
+    .description__list.second{
+      &:nth-child(2){
+        text-decoration-line: none;
+      }
+    }
+    .description__list.third{
+      text-decoration-line: none;
+    }
   }
 
   &:hover {

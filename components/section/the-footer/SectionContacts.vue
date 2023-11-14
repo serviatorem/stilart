@@ -25,7 +25,7 @@ import BaseLine from '~/components/base/BaseLine.vue'
                 ОГРНИП 321774600705557
               </p>
               <p class="contacts__item">
-                Телефон +77777777777
+                Телефон +7(915)774-64-30
               </p>
               <p class="contacts__item">
                 г. Москва
@@ -56,7 +56,7 @@ import BaseLine from '~/components/base/BaseLine.vue'
     </div>
     <img
         class="contacts__map"
-        src="/images/projects/projects0.jpg"
+        src="public/images/footer/footer.jpg"
         alt="map"
     >
     <BaseLine color="white" top="20%" width="100%" />

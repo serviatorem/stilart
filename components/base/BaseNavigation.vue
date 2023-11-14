@@ -1,8 +1,8 @@
 <script setup lang="ts">
 withDefaults(
   defineProps<{
-    type: 'footer' | 'header' | 'wide';
-  }>(),
+      type: 'footer' | 'header' | 'wide';
+    }>(),
   { type: 'header' }
 )
 </script>
@@ -10,11 +10,6 @@ withDefaults(
 <template>
   <nav :class="[`nav_${type}`]" class="nav">
     <ul class="nav__items w">
-      <!--      <li class="nav__item">-->
-      <!--        <NuxtLink to="/#about" class="a">-->
-      <!--          О нас-->
-      <!--        </NuxtLink>-->
-      <!--      </li>-->
       <li class="nav__item">
         <NuxtLink to="/#services" class="a">
           Услуги
@@ -28,6 +23,11 @@ withDefaults(
       <li class="nav__item">
         <NuxtLink to="/#stages" class="a">
           Этапы работ
+        </NuxtLink>
+      </li>
+      <li class="nav__item">
+        <NuxtLink to="/#about" class="a">
+          О нас
         </NuxtLink>
       </li>
       <li class="nav__item">
@@ -54,8 +54,9 @@ withDefaults(
     font-style: normal;
     font-weight: 500;
     transition: all .2s linear;
-    &:hover{
-      color:$d-tree;
+
+    &:hover {
+      color: $d-tree;
     }
   }
 
@@ -74,6 +75,7 @@ withDefaults(
       color: white;
     }
   }
+
   &_wide &__items {
     flex-direction: column;
     gap: 15px;

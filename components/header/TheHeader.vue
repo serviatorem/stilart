@@ -23,6 +23,22 @@ const images = ref([
   {
     id: 3,
     url: '/images/bg/opening3.jpg'
+  },
+  {
+    id: 4,
+    url: '/images/bg/opening4.jpg'
+  },
+  {
+    id: 5,
+    url: '/images/bg/opening5.jpg'
+  },
+  {
+    id: 6,
+    url: '/images/bg/opening6.jpg'
+  },
+  {
+    id: 7,
+    url: '/images/bg/opening7.jpg'
   }
 ])
 const currentImage = ref<string>(images.value.at(-1)!.url as string)
@@ -35,7 +51,11 @@ interface imagesIndexIterator extends Generator<number, number, number> {
 function * imagesIndexGenerator (): imagesIndexIterator {
   yield 0
   yield 1
-  return 2
+  yield 2
+  yield 3
+  yield 4
+  yield 5
+  return 6
 }
 
 onMounted(() => {
@@ -57,13 +77,13 @@ function changeBurgerVisibility () {
 
 <template>
   <div
-    class="header-wrapper w"
+      class="header-wrapper w"
   >
     <TransitionOpacitySemi>
       <div
-        :key="currentImage"
-        class="header__bg"
-        :style="`
+          :key="currentImage"
+          class="header__bg"
+          :style="`
                 background: url(${currentImage}) no-repeat;
                 filter:brightness(0.65);
                 background-size: cover;
@@ -79,12 +99,12 @@ function changeBurgerVisibility () {
           <BaseNavigation style="color: black" class="header__nav" />
         </div>
         <div class="header__content-question">
-          <a href="tel:+7(999)999-99-99" class="header__content-phone">
-            +7(999)999-99-99
+          <a href="tel:+7(915)774-64-30" class="header__content-phone">
+            +7(915)774-64-30
           </a>
           <BaseButton
-            type="transparent"
-            @click="modalVision = true"
+              type="transparent"
+              @click="modalVision = true"
           >
             Задать вопрос
           </BaseButton>
@@ -97,9 +117,9 @@ function changeBurgerVisibility () {
           </Teleport>
         </div>
         <BaseBurger
-          :is-open="isBurgerOpen"
-          class="header__burger-button"
-          @click="changeBurgerVisibility"
+            :is-open="isBurgerOpen"
+            class="header__burger-button"
+            @click="changeBurgerVisibility"
         />
         <Teleport to="body">
           <TransitionOpacity>
