@@ -1,34 +1,34 @@
 <script setup lang="ts"></script>
 
 <template>
-  <section class="our">
-    <div class="container-bg">
-      <h1 class="our__title">
-        Наша компания предоставляет услуги по дизайну интерьеров.
-      </h1>
-      <p class="our__description">
-        Мы берем на себя ответственность за расчеты и подбор материалов, чтобы
-        клиенты могли быть уверены в прозрачности и точности всех затрат.
-      </p>
-      <div class="our__images">
-        <img
-          src="/images/projects/projects2.png"
-          alt="our"
-          class="our__image our__image_1"
-        >
-        <img
-          src="/images/projects/projects1.png"
-          alt="our"
-          class="our__image our__image_2"
-        >
-        <img
-          src="/images/projects/projects3.png"
-          alt="our"
-          class="our__image our__image_3"
-        >
-      </div>
-    </div>
-  </section>
+<!--  <section class="our">-->
+<!--    <div class="container-bg">-->
+<!--      <h1 class="our__title">-->
+<!--        Наша компания предоставляет услуги по дизайну интерьеров.-->
+<!--      </h1>-->
+<!--      <p class="our__description">-->
+<!--        Мы берем на себя ответственность за расчеты и подбор материалов, чтобы-->
+<!--        клиенты могли быть уверены в прозрачности и точности всех затрат.-->
+<!--      </p>-->
+<!--      <div class="our__images">-->
+<!--        <img-->
+<!--          src="/images/projects/projects2.png"-->
+<!--          alt="our"-->
+<!--          class="our__image our__image_1"-->
+<!--        >-->
+<!--        <img-->
+<!--          src="/images/projects/projects1.png"-->
+<!--          alt="our"-->
+<!--          class="our__image our__image_2"-->
+<!--        >-->
+<!--        <img-->
+<!--          src="/images/projects/projects3.png"-->
+<!--          alt="our"-->
+<!--          class="our__image our__image_3"-->
+<!--        >-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
 </template>
 
 <style scoped lang="scss">
