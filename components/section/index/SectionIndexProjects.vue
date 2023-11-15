@@ -21,7 +21,7 @@ const projects = await useAPIStore.getPortfolio()
           :to="`/project/${project.id}`"
         >
           <img
-            :src="`http://213.171.5.143:1337${project.attributes.images.data[0].attributes.formats.large.url}`"
+            :src="`https://admin.stilart-design.ru:1337${project.attributes.images.data[0].attributes.formats.large.url}`"
             alt="Проект компании StilArt"
             class="project-card__image w"
           >
