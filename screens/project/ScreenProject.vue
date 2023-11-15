@@ -12,6 +12,7 @@ const props = defineProps<{
 const project = props.project
 const modalVision = ref<boolean>(false)
 const imageModal = ref()
+console.log(project.attributes.images.data)
 </script>
 
 <template>
@@ -52,19 +53,19 @@ const imageModal = ref()
       </div>
       <div class="projectPage__images">
         <div
-            v-for="image in project.images"
-            :key="project.id"
-            class="projectPage__images__image-wrapper"
+          v-for="image in project.attributes.images.data"
+          :key="project.id"
+          class="projectPage__images__image-wrapper"
         >
           <img
-              :src="'/images/projectPage/' + image"
-              :alt="image"
-              class="projectPage__images__image"
-              @click="imageModal = image;modalVision = true"
+            :src="`https://admin.stilart-design.ru${image.attributes.formats.large.url}`"
+            :alt="image"
+            class="projectPage__images__image"
+            @click="imageModal = image.attributes.formats.large.url;modalVision = true"
           >
         </div>
       </div>
-      <div class="projectPage__form" :style="'background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(' + '/images/projectPage/'+ project.image + ') center no-repeat; background-size:cover;'">
+      <div class="projectPage__form" :style="'background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(' + 'https://admin.stilart-design.ru'+ project.attributes.images.data[0].attributes.formats.large.url + ') center no-repeat; background-size:cover;'">
         <h3 class="projectPage__form__title h3">
           Напишите нам!
         </h3>
@@ -75,10 +76,10 @@ const imageModal = ref()
       <OpacityTransition>
         <ModalWrapper v-if="modalVision" @hide-modal="modalVision = false">
           <img
-              :src="'/images/projectPage/' + imageModal"
-              :alt="imageModal"
-              class="projectPage__image__modal"
-              @click="modalVision = false"
+              :src="`https://admin.stilart-design.ru${imageModal}`"
+            :alt="imageModal"
+            class="projectPage__image__modal"
+            @click="modalVision = false"
           >
         </ModalWrapper>
       </OpacityTransition>
