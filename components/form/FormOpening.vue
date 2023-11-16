@@ -34,7 +34,7 @@ async function goMail() {
           phone: phoneF.value
         }
       }
-      await useAPI().postPortfolio(data)
+      await useAPI().postPortfolio(nameF.value, emailF.value, phoneF.value)
       buttonText.value = 'Успешно отправлено'
     } catch (e) {
       buttonText.value = 'Ошибка. Попробуйте позже'

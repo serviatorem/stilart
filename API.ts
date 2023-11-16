@@ -6,10 +6,18 @@ export function useAPI () {
       })
       return res.json()
     },
-    async postPortfolio(item){
-      const res = await fetch('https://admin.stilart-design.ru/api/Clients',{
-        method:"POST",
-        body:JSON.stringify(item)
+    async postPortfolio (name:string, email:string, phone:string) {
+      const res = await fetch('https://admin.stilart-design.ru/api/Clients', {
+        method: 'POST',
+        body: JSON.stringify(
+          {
+            data: {
+              name:name,
+              email: email,
+              phone:phone
+            }
+          }
+        )
       })
       return res.status
     }
