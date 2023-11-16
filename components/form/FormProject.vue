@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import {ref} from 'vue'
 import BaseInput from '~/components/base/BaseInput.vue'
 import BaseCheckbox from '~/components/base/BaseCheckbox.vue'
 import BaseButton from '~/components/base/BaseButton.vue'
+import {useAPI} from "../../API";
 
 const buttonText = ref<
     | 'Отправить'
@@ -12,15 +13,13 @@ const buttonText = ref<
     | 'Не всё заполненно!'
 >('Отправить')
 
-const runtimeConfig = useRuntimeConfig()
-
 const form = ref<HTMLInputElement | null>(null)
 const nameF = ref<string>('')
 const mailF = ref<string>('')
 const phoneF = ref<string>('')
 const checkboxF = ref<boolean>(false)
 
-async function goMail () {
+async function goMail() {
   if (!form.value) {
     return
   }
@@ -28,14 +27,14 @@ async function goMail () {
   if (form.value.checkValidity()) {
     buttonText.value = 'Идёт отправка...'
     try {
-      await fetch('/mail/send', {
-        method: 'POST',
-        body: JSON.stringify({
-          from: runtimeConfig.public.mailUser,
-          subject: 'Заполнена заявка с сайта StilArt',
-          text: `Имя: ${nameF.value}. Почта: ${mailF.value}. Телефон: ${phoneF.value}`
-        })
-      })
+      const data = {
+        data: {
+          name: nameF.value,
+          email: mailF.value,
+          phone: phoneF.value
+        }
+      }
+      await useAPI().postPortfolio(data)
       buttonText.value = 'Успешно отправлено'
     } catch (e) {
       buttonText.value = 'Ошибка. Попробуйте позже'

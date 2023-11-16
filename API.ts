@@ -5,6 +5,13 @@ export function useAPI () {
         method: 'GET'
       })
       return res.json()
+    },
+    async postPortfolio(item){
+      const res = await fetch('https://admin.stilart-design.ru/api/Clients',{
+        method:"POST",
+        body:JSON.stringify(item)
+      })
+      return res.status
     }
   }
 }
