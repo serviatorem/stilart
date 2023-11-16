@@ -11,7 +11,7 @@ export function useAPI () {
         method: 'POST',
         body: JSON.stringify(
           {
-            data: {
+            "data": {
               name:name,
               email: email,
               phone:phone
