@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import {ref} from 'vue'
+import { ref } from 'vue'
+import { useAPI } from '../../API'
 import BaseInput from '~/components/base/BaseInput.vue'
 import BaseCheckbox from '~/components/base/BaseCheckbox.vue'
 import BaseButton from '~/components/base/BaseButton.vue'
-import {useAPI} from "../../API";
 
 const buttonText = ref<
     | 'Отправить'
@@ -19,7 +19,7 @@ const mailF = ref<string>('')
 const phoneF = ref<string>('')
 const checkboxF = ref<boolean>(false)
 
-async function goMail() {
+async function goMail () {
   if (!form.value) {
     return
   }
@@ -27,14 +27,7 @@ async function goMail() {
   if (form.value.checkValidity()) {
     buttonText.value = 'Идёт отправка...'
     try {
-      const data = {
-        data: {
-          name: nameF.value,
-          email: mailF.value,
-          phone: phoneF.value
-        }
-      }
-      await useAPI().postPortfolio(nameF.value, emailF.value, phoneF.value)
+      await useAPI().postPortfolio(nameF.value, mailF.value, phoneF.value)
       buttonText.value = 'Успешно отправлено'
     } catch (e) {
       buttonText.value = 'Ошибка. Попробуйте позже'

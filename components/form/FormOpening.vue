@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import {ref} from 'vue'
+import { ref } from 'vue'
+import { useAPI } from '../../API'
 import BaseInput from '~/components/base/BaseInput.vue'
 import BaseCheckbox from '~/components/base/BaseCheckbox.vue'
 import BaseButton from '~/components/base/BaseButton.vue'
-import {useAPI} from "../../API";
 
 const buttonText = ref<
     | 'Отправить'
@@ -19,7 +19,7 @@ const mailF = ref<string>('')
 const phoneF = ref<string>('')
 const checkboxF = ref<boolean>(false)
 
-async function goMail() {
+async function goMail () {
   if (!form.value) {
     return
   }
@@ -27,14 +27,7 @@ async function goMail() {
   if (form.value.checkValidity()) {
     buttonText.value = 'Идёт отправка...'
     try {
-      const data = {
-        data: {
-          name: nameF.value,
-          email: mailF.value,
-          phone: phoneF.value
-        }
-      }
-      await useAPI().postPortfolio(nameF.value, emailF.value, phoneF.value)
+      await useAPI().postPortfolio(nameF.value, mailF.value, phoneF.value)
       buttonText.value = 'Успешно отправлено'
     } catch (e) {
       buttonText.value = 'Ошибка. Попробуйте позже'
@@ -55,33 +48,33 @@ async function goMail() {
       Оставьте заявку
     </p>
     <BaseInput
-        v-model="nameF"
-        required
-        label-text="Имя"
-        placeholder="Тихон"
-        type="text"
+      v-model="nameF"
+      required
+      label-text="Имя"
+      placeholder="Тихон"
+      type="text"
     />
     <BaseInput
-        v-model="mailF"
-        required
-        label-text="Электронная почта"
-        placeholder="example@mail.ru"
-        type="email"
+      v-model="mailF"
+      required
+      label-text="Электронная почта"
+      placeholder="example@mail.ru"
+      type="email"
     />
     <BaseInput
-        v-model="phoneF"
-        v-maska
-        data-maska="+7 (###) ###-##-##"
-        required
-        pattern="^(?:\+7\s)?\(\d{3}\)\s\d{3}-\d{2}-\d{2}$"
-        label-text="Номер телефона"
-        placeholder="7 (999) 999-99-99"
-        type="text"
+      v-model="phoneF"
+      v-maska
+      data-maska="+7 (###) ###-##-##"
+      required
+      pattern="^(?:\+7\s)?\(\d{3}\)\s\d{3}-\d{2}-\d{2}$"
+      label-text="Номер телефона"
+      placeholder="7 (999) 999-99-99"
+      type="text"
     />
     <BaseCheckbox
-        v-model="checkboxF"
-        required
-        label-text="Согласие на обработку перс. данных"
+      v-model="checkboxF"
+      required
+      label-text="Согласие на обработку перс. данных"
     />
     <BaseButton class="w" type="transparent" @click.prevent="goMail">
       {{ buttonText }}
