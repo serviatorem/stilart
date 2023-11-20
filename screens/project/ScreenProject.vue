@@ -12,7 +12,6 @@ const props = defineProps<{
 const project = props.project
 const modalVision = ref<boolean>(false)
 const imageModal = ref()
-console.log(project.attributes.images.data)
 </script>
 
 <template>
@@ -23,8 +22,8 @@ console.log(project.attributes.images.data)
           <!--          <h2 class="projectPage__info__title h2">-->
           <!--            О проекте-->
           <!--          </h2>-->
-          <h2 class="projectPage__info__title h2">
-            {{ project.name }}
+          <h2 id="project" class="projectPage__info__title h2">
+            {{ project.attributes.title }}
           </h2>
         </div>
         <!--        <div class="projectPage__info__description-wrapper">-->
@@ -76,7 +75,7 @@ console.log(project.attributes.images.data)
       <OpacityTransition>
         <ModalWrapper v-if="modalVision" @hide-modal="modalVision = false">
           <img
-              :src="`https://admin.stilart-design.ru${imageModal}`"
+            :src="`https://admin.stilart-design.ru${imageModal}`"
             :alt="imageModal"
             class="projectPage__image__modal"
             @click="modalVision = false"
