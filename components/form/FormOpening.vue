@@ -1,18 +1,17 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useAPI } from '../../API'
 import BaseInput from '~/components/base/BaseInput.vue'
 import BaseCheckbox from '~/components/base/BaseCheckbox.vue'
 import BaseButton from '~/components/base/BaseButton.vue'
 
 const buttonText = ref<
-  | 'Отправить'
-  | 'Ошибка. Попробуйте позже'
-  | 'Успешно отправлено'
-  | 'Идёт отправка...'
-  | 'Не всё заполненно!'
+    | 'Отправить'
+    | 'Ошибка. Попробуйте позже'
+    | 'Успешно отправлено'
+    | 'Идёт отправка...'
+    | 'Не всё заполненно!'
 >('Отправить')
-
-const runtimeConfig = useRuntimeConfig()
 
 const form = ref<HTMLInputElement | null>(null)
 const nameF = ref<string>('')
@@ -28,14 +27,7 @@ async function goMail () {
   if (form.value.checkValidity()) {
     buttonText.value = 'Идёт отправка...'
     try {
-      await fetch('/mail/send', {
-        method: 'POST',
-        body: JSON.stringify({
-          from: runtimeConfig.public.mailUser,
-          subject: 'Заполнена заявка с сайта StilArt',
-          text: `Имя: ${nameF.value}. Почта: ${mailF.value}. Телефон: ${phoneF.value}`
-        })
-      })
+      await useAPI().postPortfolio(nameF.value, mailF.value, phoneF.value)
       buttonText.value = 'Успешно отправлено'
     } catch (e) {
       buttonText.value = 'Ошибка. Попробуйте позже'
@@ -102,7 +94,7 @@ async function goMail () {
   gap: 20px;
 
   &__title {
-    color:$white;
+    color: $white;
     font-size: 24px;
     font-weight: 500;
   }
