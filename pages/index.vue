@@ -24,7 +24,7 @@ useHead({
     {
       rel: 'preload',
       as: 'image',
-      href: '/images/bg/opening3.png'
+      href: '/images/bg/opening3.jpg'
     }
   ]
 })

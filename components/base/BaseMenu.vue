@@ -4,30 +4,30 @@ import OpacityTransition from '~/components/transition/OpacityTransition.vue'
 import BaseButton from '~/components/base/BaseButton.vue'
 import ModalWrapper from '~/components/modal/ModalWrapper.vue'
 import BaseModal from '~/components/base/BaseModal.vue'
-
+const modalVisionModal = ref(false)
 defineEmits<{
   clickNav: [];
 }>()
 </script>
 
 <template>
-  <div class="menu" @click="$emit('clickNav')">
-    <BaseNavigation type="wide" />
+  <div class="menu">
+    <BaseNavigation type="wide" @click="$emit('clickNav')" />
     <div class="header__content-question">
       <BaseButton
         type="header-burger"
-        @click="modalVision = true"
+        @click="modalVisionModal = true"
       >
         Задать вопрос
       </BaseButton>
-      <Teleport to="body">
-        <OpacityTransition>
-          <ModalWrapper v-if="modalVision" @hide-modal="modalVision = false">
-            <BaseModal />
-          </ModalWrapper>
-        </OpacityTransition>
-      </Teleport>
     </div>
+    <Teleport to="body">
+      <OpacityTransition>
+        <ModalWrapper v-if="modalVisionModal" @hide-modal="modalVisionModal = false">
+          <BaseModal />
+        </ModalWrapper>
+      </OpacityTransition>
+    </Teleport>
   </div>
 </template>
 

@@ -25,8 +25,12 @@ const benefits: IBenefits[] = [
   <div class="benefits">
     <div class="benefits__content">
       <div v-for="benefit in benefits" :key="benefit.id" class="benefits__content-item content__item">
-        <h3 class="h2 content__item-title">{{benefit.name}}</h3>
-        <p class="content__item-description">{{benefit.description}}</p>
+        <h3 class="h2 content__item-title">
+          {{ benefit.name }}
+        </h3>
+        <p class="content__item-description">
+          {{ benefit.description }}
+        </p>
       </div>
     </div>
   </div>
@@ -53,12 +57,9 @@ const benefits: IBenefits[] = [
       font-size: adpval(27, 29);
     }
   }
-  @media screen and (max-width: 600px) {
-    .benefits__content{
-      gap:10px 50px;
-      display: grid;
-      flex-wrap: wrap;
-      justify-content: center;
+  @media screen and (max-width: 720px) {
+    .benefits{
+      display: none;
     }
   }
 </style>

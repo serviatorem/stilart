@@ -77,13 +77,13 @@ function changeBurgerVisibility () {
 
 <template>
   <div
-      class="header-wrapper w"
+    class="header-wrapper w"
   >
     <TransitionOpacitySemi>
       <div
-          :key="currentImage"
-          class="header__bg"
-          :style="`
+        :key="currentImage"
+        class="header__bg"
+        :style="`
                 background: url(${currentImage}) no-repeat;
                 filter:brightness(0.65);
                 background-size: cover;
@@ -103,8 +103,8 @@ function changeBurgerVisibility () {
             +7(915)774-64-30
           </a>
           <BaseButton
-              type="transparent"
-              @click="modalVision = true"
+            type="transparent"
+            @click="modalVision = true"
           >
             Задать вопрос
           </BaseButton>
@@ -117,9 +117,9 @@ function changeBurgerVisibility () {
           </Teleport>
         </div>
         <BaseBurger
-            :is-open="isBurgerOpen"
-            class="header__burger-button"
-            @click="changeBurgerVisibility"
+          :is-open="isBurgerOpen"
+          class="header__burger-button"
+          @click="changeBurgerVisibility"
         />
         <Teleport to="body">
           <TransitionOpacity>
