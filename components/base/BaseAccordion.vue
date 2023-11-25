@@ -31,14 +31,14 @@ function changeDescriptionVisibility () {
       </p>
       <div class="accordion__arrow">
         <img
-            v-show="isShowDescription"
-            src="../../assets/icons/up.svg"
-            alt="up"
+          v-show="isShowDescription"
+          src="../../assets/icons/up.svg"
+          alt="up"
         >
         <img
-            v-show="!isShowDescription"
-            src="../../assets/icons/down.svg"
-            alt="down"
+          v-show="!isShowDescription"
+          src="../../assets/icons/down.svg"
+          alt="down"
         >
       </div>
     </div>

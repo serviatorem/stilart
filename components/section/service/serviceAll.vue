@@ -24,9 +24,9 @@ const serviceOther = services
         </div>
         <div class="serviceAll__item__description">
           <p
-              v-for="service in serviceOther[2].description"
-              :key="service.id"
-              class="serviceAll__item__description__item"
+            v-for="service in serviceOther[2].description"
+            :key="service.id"
+            class="serviceAll__item__description__item"
           >
             {{ service.briefly }}
           </p>
@@ -45,9 +45,9 @@ const serviceOther = services
         </div>
         <div class="serviceAll__item__description">
           <p
-              v-for="service in serviceOther[1].description"
-              :key="service.id"
-              class="serviceAll__item__description__item"
+            v-for="service in serviceOther[1].description"
+            :key="service.id"
+            class="serviceAll__item__description__item"
           >
             {{ service.briefly }}
           </p>
@@ -61,9 +61,9 @@ const serviceOther = services
         </div>
         <div class="serviceAll__item__description">
           <p
-              v-for="service in serviceOther[0].description"
-              :key="service.id"
-              class="serviceAll__item__description__item"
+            v-for="service in serviceOther[0].description"
+            :key="service.id"
+            class="serviceAll__item__description__item"
           >
             {{ service.briefly }}
           </p>

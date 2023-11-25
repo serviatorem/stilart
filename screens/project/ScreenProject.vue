@@ -1,12 +1,10 @@
 <script setup lang="ts">
-
-import { IProject } from '~/interfaces/IProject'
 import FormProject from '~/components/form/FormProject.vue'
 import ModalWrapper from '~/components/modal/ModalWrapper.vue'
 import OpacityTransition from '~/components/transition/OpacityTransition.vue'
 
 const props = defineProps<{
-  project:IProject
+  project:any
 }>()
 // eslint-disable-next-line vue/no-setup-props-destructure
 const project = props.project
@@ -19,41 +17,15 @@ const imageModal = ref()
     <div class="container projectPage">
       <div class="projectPage__info">
         <div class="projectPage__info__title-wrapper">
-          <!--          <h2 class="projectPage__info__title h2">-->
-          <!--            О проекте-->
-          <!--          </h2>-->
           <h2 id="project" class="projectPage__info__title h2">
             {{ project.attributes.title }}
           </h2>
         </div>
-        <!--        <div class="projectPage__info__description-wrapper">-->
-        <!--          <p class="projectPage__info__description">-->
-        <!--            <span>Год реализации</span> - {{ project.info.year }}-->
-        <!--          </p>-->
-        <!--          <p class="projectPage__info__description">-->
-        <!--            <span>Площадь</span> - {{ project.info.square }}-->
-        <!--          </p>-->
-        <!--          <p class="projectPage__info__description">-->
-        <!--            <span>Дизайнеры</span> - {{ project.info.designers }}-->
-        <!--          </p>-->
-        <!--          <p class="projectPage__info__description">-->
-        <!--            <span>Декоратор</span> - {{ project.info.decorator }}-->
-        <!--          </p>-->
-        <!--          <p class="projectPage__info__description">-->
-        <!--            <span>Фотограф</span> - {{ project.info.photograph }}-->
-        <!--          </p>-->
-        <!--          <p class="projectPage__info__description">-->
-        <!--            <span>Количество комнат</span> - {{ project.info.countRoom }}-->
-        <!--          </p>-->
-        <!--          <p class="projectPage__info__description">-->
-        <!--            <span>Срок реализации</span> - {{ project.info.term }}-->
-        <!--          </p>-->
-        <!--        </div>-->
       </div>
       <div class="projectPage__images">
         <div
           v-for="image in project.attributes.images.data"
-          :key="project.id"
+          :key="image.id"
           class="projectPage__images__image-wrapper"
         >
           <img
