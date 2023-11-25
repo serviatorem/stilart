@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import FormOpening from '~/components/form/FormOpening.vue'
 import BaseBenefits from '~/components/base/BaseBenefits.vue'
+import BaseButton from '~/components/base/BaseButton.vue'
+import BaseModal from '~/components/base/BaseModal.vue'
+import OpacityTransition from '~/components/transition/OpacityTransition.vue'
+import ModalWrapper from '~/components/modal/ModalWrapper.vue'
+const modalVision = ref(false)
 </script>
 
 <template>
@@ -18,7 +23,21 @@ import BaseBenefits from '~/components/base/BaseBenefits.vue'
         <BaseBenefits />
       </div>
       <div class="opening__right">
-        <FormOpening />
+        <FormOpening class="opening__right-form" />
+        <BaseButton
+          type="transparent"
+          class="opening__right-button"
+          @click="modalVision = true"
+        >
+          Задать вопрос
+        </BaseButton>
+        <Teleport to="body">
+          <OpacityTransition>
+            <ModalWrapper v-if="modalVision" @hide-modal="modalVision = false">
+              <BaseModal />
+            </ModalWrapper>
+          </OpacityTransition>
+        </Teleport>
       </div>
     </div>
   </section>
@@ -29,7 +48,6 @@ import BaseBenefits from '~/components/base/BaseBenefits.vue'
   position: relative;
   color: $white;
   overflow: hidden;
-
   &__content {
     position: relative;
     padding: 200px 20px;
@@ -39,7 +57,11 @@ import BaseBenefits from '~/components/base/BaseBenefits.vue'
     max-width: 1440px;
     margin: 0 auto;
   }
-
+  &__right{
+    &-button{
+      display: none;
+    }
+  }
   &__left {
     display: flex;
     flex-direction: column;
@@ -131,6 +153,19 @@ import BaseBenefits from '~/components/base/BaseBenefits.vue'
 @media (width < 900px){
   .opening{
     margin: 30px 0 0 0;
+  }
+}
+@media (width < 768px) {
+  .opening{
+    &__right{
+      &-form{
+        display: none;
+      }
+      &-button{
+        display: block;
+        margin: 0 auto;
+      }
+    }
   }
 }
 @media (width < 500px) {

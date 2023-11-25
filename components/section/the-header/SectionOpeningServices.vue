@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import FormOpening from '~/components/form/FormOpening.vue'
+import BaseModal from '~/components/base/BaseModal.vue'
+import OpacityTransition from '~/components/transition/OpacityTransition.vue'
+import BaseButton from '~/components/base/BaseButton.vue'
+import ModalWrapper from '~/components/modal/ModalWrapper.vue'
+const modalVision = ref(false)
 </script>
 
 <template>
@@ -16,7 +21,21 @@ import FormOpening from '~/components/form/FormOpening.vue'
         </div>
       </div>
       <div class="opening__right">
-        <FormOpening />
+        <FormOpening class="opening__right-form" />
+        <BaseButton
+            type="transparent"
+            class="opening__right-button"
+            @click="modalVision = true"
+        >
+          Задать вопрос
+        </BaseButton>
+        <Teleport to="body">
+          <OpacityTransition>
+            <ModalWrapper v-if="modalVision" @hide-modal="modalVision = false">
+              <BaseModal />
+            </ModalWrapper>
+          </OpacityTransition>
+        </Teleport>
       </div>
     </div>
   </section>
@@ -35,7 +54,11 @@ import FormOpening from '~/components/form/FormOpening.vue'
     grid-template-columns: auto adpval(380, 460, 1210, 800);
     gap: adpval(14, 40);
   }
-
+  &__right{
+    &-button{
+      display: none;
+    }
+  }
   &__left {
     display: flex;
     flex-direction: column;
@@ -122,6 +145,19 @@ import FormOpening from '~/components/form/FormOpening.vue'
 @media (width < 900px){
   .opening{
     margin: 30px 0 0 0;
+  }
+}
+@media (width < 768px) {
+  .opening{
+    &__right{
+      &-form{
+        display: none;
+      }
+      &-button{
+        display: block;
+        margin: 0 auto;
+      }
+    }
   }
 }
 @media (width < 500px) {

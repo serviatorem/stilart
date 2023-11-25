@@ -114,4 +114,9 @@ const service = props.service
       }
     }
   }
+  @media screen and (max-width: 400px){
+    .servicePackage__item:nth-child(3) .servicePackage__item__description-wrapper{
+      grid-template-columns: 1fr;
+    }
+  }
 </style>
